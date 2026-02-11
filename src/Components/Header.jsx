@@ -193,7 +193,7 @@ export default function Header() {
 
             <Link to="/"><img className="w-[152px] h-[39px] hidden lg:flex" src={Logo} alt="" /></Link>
 
-            <form onSubmit={handleSearch} className="hidden lg:flex relative h-[12] lg:w-[556px]">
+            <form onSubmit={handleSearch} className="hidden lg:flex relative h-[60px] lg:w-[556px]">
                 <Input value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} type="text" className="w-full h-[12] rounded-md border-[#ACACAC]" placeholder="Search for a gadget..." />
                 <span className="absolute right-3 top-3"><CiSearch size={30} /></span>
             </form>
