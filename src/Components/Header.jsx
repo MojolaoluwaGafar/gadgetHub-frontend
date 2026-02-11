@@ -194,8 +194,8 @@ export default function Header() {
             <Link to="/"><img className="w-[152px] h-[39px] hidden lg:flex" src={Logo} alt="" /></Link>
 
             <form onSubmit={handleSearch} className="hidden lg:flex relative h-[60px] lg:w-[556px]">
-                <Input value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} type="text" className="w-full h-[12] rounded-md border-[#ACACAC]" placeholder="Search for a gadget..." />
-                <span className="absolute right-3 top-3"><CiSearch size={30} /></span>
+                <Input value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} type="text" className="w-full h-full rounded-md border-[#ACACAC]" placeholder="Search for a gadget..." />
+                <div className="absolute right-3 top-3" ><span><CiSearch size={30} /></span></div>
             </form>
 
              <div className="gap-5 hidden lg:flex">
