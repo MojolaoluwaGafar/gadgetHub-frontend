@@ -107,7 +107,7 @@ export default function Header() {
                     )}
                     </button>) )}
          <div onClick={()=> setIsOpen(!isOpen)} className="flex items-center cursor-pointer gap-1">
-          <img className="h-[30px] w-[30px] rounded-full" src={user?.image || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRadJ-YmNxJTg6v9iO22fzR_65KenYJHFB5zg&s"} alt={user.firstName} />
+          <img loading="lazy" className="h-[30px] w-[30px] rounded-full" src={user?.image || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRadJ-YmNxJTg6v9iO22fzR_65KenYJHFB5zg&s"} alt={user.firstName} />
           <p className="text-[18px] font-semibold">Hello {user.firstName}</p>
          </div>
         </div>
@@ -191,7 +191,7 @@ export default function Header() {
               
                </div>
 
-            <Link to="/"><img className="w-[152px] h-[39px] hidden lg:flex" src={Logo} alt="" /></Link>
+            <Link to="/"><img loading="lazy" className="w-[152px] h-[39px] hidden lg:flex" src={Logo} alt="" /></Link>
 
             <form onSubmit={handleSearch} className="hidden lg:flex relative h-[60px] lg:w-[556px]">
                 <Input value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} type="text" className="w-full h-full rounded-md border-[#ACACAC]" placeholder="Search for a gadget..." />

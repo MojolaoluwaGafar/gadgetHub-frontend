@@ -32,6 +32,7 @@ export default function UserInfo() {
           <div>
             <div className="w-[100px] h-[100px] relative rounded-full py-4">
               <img
+              loading="lazy"
                 className="w-[100px] h-[100px] rounded-full"
                 src={user.image || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRadJ-YmNxJTg6v9iO22fzR_65KenYJHFB5zg&s"}
                 alt=""

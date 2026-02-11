@@ -37,6 +37,7 @@ export default function OrdersCard({ order, onCancel, setActiveTab }) {
 
        <div className="flex-col lg:flex lg:flex-row gap-4">
         <img
+        loading="lazy"
           className="w-[78px] h-[97px] object-cover rounded-md"
           src={product.image}
           alt={product.name}

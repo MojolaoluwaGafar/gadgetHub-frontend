@@ -212,10 +212,10 @@ export default function CheckoutPage() {
 
       <div className="flex justify-between px-3 py-3 container mx-auto">
         <Link to="/">
-          <img className="w-[152px] h-[39px]" src={Logo} alt="" />
+          <img loading="lazy" className="w-[152px] h-[39px]" src={Logo} alt="" />
         </Link>
         <div className="flex items-center gap-2">
-          <img className="w-4 h-4 lg:w-6 lg:h-6" src={paymentVector} alt="" />
+          <img loading="lazy" className="w-4 h-4 lg:w-6 lg:h-6" src={paymentVector} alt="" />
           <p className="text-[14px] lg:text-[18px]">secure & safe payment</p>
         </div>
       </div>

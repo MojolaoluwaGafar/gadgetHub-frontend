@@ -37,7 +37,7 @@ export default function ProductCard({id,image,name,description,rating,reviews,pr
         ) : (
           <CiHeart size={25} />
         )}</button>
-        <img className="w-full object-cover rounded-t-md h-[274px]" src={image} alt="" />
+        <img loading="lazy" className="w-full object-cover rounded-t-md h-[274px]" src={image} alt="" />
 
     <div className="w-full p-4 border-t border-t-[#E8E6E6]">
           <Link to={`/product/${id}`} className="flex flex-col gap-2"

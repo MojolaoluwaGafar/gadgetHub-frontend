@@ -124,7 +124,7 @@ export default function ProductPage() {
                 onClick={() => goToPage(currentPage + 1)}
                 disabled={currentPage === totalPages}
               >
-                <img src={vector} alt="" />
+                <img loading="lazy" src={vector} alt="" />
               </button>
             </div>
            </div>

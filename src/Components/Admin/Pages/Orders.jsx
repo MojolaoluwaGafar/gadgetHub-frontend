@@ -55,6 +55,7 @@ export default function Orders() {
             className="flex items-center cursor-pointer gap-2"
           >
             <img
+            loading="lazy"
               className="h-[30px] w-[30px] rounded-full"
               src={user?.image || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRadJ-YmNxJTg6v9iO22fzR_65KenYJHFB5zg&s"}
               alt={user?.firstName}

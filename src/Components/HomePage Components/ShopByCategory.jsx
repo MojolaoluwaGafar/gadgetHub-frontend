@@ -39,6 +39,7 @@ export default function ShopByCategory() {
         {uniqueCategoryProducts.map((product, index) => (
           <div key={index} className="text-center flex flex-col items-center justify-center">
             <img
+            loading="lazy"
               src={product.image}
               alt={product.category}
               className="mx-auto bg-[#E3E3E3] rounded-full h-[188px] w-[188px] object-cover"
@@ -56,6 +57,7 @@ export default function ShopByCategory() {
         {uniqueCategoryProducts.map((product, index) => (
           <div key={index} className="flex-shrink-0 text-center flex flex-col items-center justify-center py-2 snap-start">
             <img
+            loading="lazy"
               src={product.image}
               alt={product.category}
               className="mx-auto bg-[#E3E3E3] rounded-full 
