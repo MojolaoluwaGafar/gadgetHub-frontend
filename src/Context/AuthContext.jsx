@@ -1,7 +1,6 @@
 import { createContext, useState } from "react"
 import axios from "axios"
 import PropTypes from "prop-types"
-
 export const AuthContext = createContext()
 
 export const AuthProvider = ({children})=>{
@@ -84,6 +83,46 @@ export const AuthProvider = ({children})=>{
         }    
     }
 
+    const refreshUser = async () => {
+  if (!token) return;
+
+  try {
+    const response = await axios.get(
+      `${import.meta.env.VITE_AUTH_BASE_URL}/me`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+
+    setUser(response.data.user);
+    localStorage.setItem("user", JSON.stringify(response.data.user));
+    return response.data.user;
+  } catch (error) {
+    console.error("Failed to refresh user:", error.response?.data || error.message);
+  }
+};
+const deleteAccount = async () => {
+    if (!user || !token) return;
+    try {
+      const response = await axios.delete(`${import.meta.env.VITE_AUTH_BASE_URL}/me`,
+        { headers: { Authorization: `Bearer ${token}` } }
+      );
+
+      setUser(null);
+      setToken(null);
+      localStorage.clear();
+      sessionStorage.clear();
+      return response.data;
+    } catch (error) {
+      throw error.response?.data || error;
+    }
+  };
+
+
+
+
     const logout = ()=>{
         setUser(null)
         setToken(null)
@@ -92,7 +131,7 @@ export const AuthProvider = ({children})=>{
     }
 
     return (
-        <AuthContext.Provider value={{SignUp,SignIn,user,token,logout,forgotPassword, resetPassword}}>
+        <AuthContext.Provider value={{SignUp,SignIn,user,token,logout,forgotPassword, resetPassword, refreshUser, deleteAccount}}>
             {children}
         </AuthContext.Provider>
     )

@@ -38,7 +38,7 @@ export default function Header() {
     {
         id: 2,
         icon: <FaRegHeart />,
-        linkTo: "/likes"
+        linkTo: ""
     },
     {
         id: 3,
@@ -152,9 +152,9 @@ export default function Header() {
 
                <div className="flex justify-between w-full lg:hidden">
                <div className="flex gap-2 items-center">
-                 <button onClick={toggleMenu} className="text-2xl">
+                 {/* <button onClick={toggleMenu} className="text-2xl">
                 {menuOpen ? <IoCloseSharp /> : <GiHamburgerMenu />}
-              </button>
+              </button> */}
               <Link to="/"><img className="w-[152px] h-[39px]" src={Logo} alt="" /></Link>
                </div>
 
@@ -178,6 +178,13 @@ export default function Header() {
                                 <span className="bg-[#6C4CF1] text-white w-6 h-6 rounded-full flex items-center justify-center absolute -top-2 -right-2">
                                   {likes.length}</span>)}
                             </Link>);}
+                            if (icon.id === 3) {
+                              return (
+                                 <Link to={user ? icon.linkTo : "/login"} key={icon.id} className="relative">
+                                  <span className="text-3xl">{icon.icon}</span>
+                            </Link>
+                              )
+                            }
                             
                   return null;})}
               </div>
@@ -186,7 +193,7 @@ export default function Header() {
 
             <Link to="/"><img className="w-[152px] h-[39px] hidden lg:flex" src={Logo} alt="" /></Link>
 
-            <form onSubmit={handleSearch} className="hidden lg:flex relative lg:w-[556px]">
+            <form onSubmit={handleSearch} className="hidden lg:flex relative h-[12] lg:w-[556px]">
                 <Input value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} type="text" className="w-full h-[12] rounded-md border-[#ACACAC]" placeholder="Search for a gadget..." />
                 <span className="absolute right-3 top-3"><CiSearch size={30} /></span>
             </form>
@@ -219,7 +226,7 @@ export default function Header() {
               </div>
 
 
-              <AnimatePresence>
+              {/* <AnimatePresence>
                 {menuOpen && (
                   <motion.div  initial={{ opacity: 0, x: -200 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -233,8 +240,9 @@ export default function Header() {
             
                   </motion.div>
                 )}
-              </AnimatePresence>
+              </AnimatePresence> */}
         </div>
+
 
         <div className="flex bg-[#191C1F] text-white mt-1">
             <div className="hidden lg:flex items-center container mx-auto h-[65px] text-sm lg:text-lg px-5 gap-8">

@@ -132,6 +132,23 @@ export default function CheckoutPage() {
 
       const orderId = orderRes.data.order._id;
       setCart([]);
+    //   const { saveAddress, address, state, city } = orderData.customer;
+    //   if (saveAddress && address && state && city) {
+    //     try {
+    // await axios.post(
+    //   "http://localhost:5000/api/user/auth/address",
+    //   { address, state, city },
+    //   {
+    //     headers: {
+    //       Authorization: `Bearer ${token}`,
+    //     },
+    //   }
+    // );
+    //   } catch (err) {
+    //   console.error("Failed to save address", err);
+    //  }
+    //  }
+    //  await refreshUser()
 
       if (orderData.paymentMethod === "delivery") {
         toast.success("Order placed successfully. Pay on delivery.");

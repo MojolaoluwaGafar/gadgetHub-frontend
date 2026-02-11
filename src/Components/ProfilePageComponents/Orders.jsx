@@ -3,6 +3,8 @@ import OrdersCard from "../ProfilePageComponents/OrdersCard"
 import { AuthContext } from "../../Context/AuthContext"
 import axios from "axios";
 import { toast } from "react-toastify"
+import { useParams } from "react-router"
+import { products } from "../../productData.js"
 
 export default function Orders() {
     const { user, token } = useContext(AuthContext);
@@ -51,6 +53,9 @@ const handleCancel = async (id) => {
     if (activeTab === "cancelled") return o.orderStatus === "cancelled";
     return true;
   });
+    const { id } = useParams()
+    const productId = Number(id);
+    const product = products.find((p) => Number(p.id) === productId);
 
   return (
     <div>
@@ -67,7 +72,7 @@ const handleCancel = async (id) => {
           <p className="text-center">Loading orders...</p>
         ) : filteredOrders.length > 0 ? (
           filteredOrders.map((order) => (
-            <OrdersCard key={order._id} order={order} onCancel={handleCancel}  setActiveTab={setActiveTab} />
+            <OrdersCard key={order._id} order={order} onCancel={handleCancel}  setActiveTab={setActiveTab} product={product} />
           ))
         ) : (
           <p className="text-gray-500 text-center">No orders found.</p>

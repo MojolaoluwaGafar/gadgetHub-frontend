@@ -39,7 +39,7 @@ export default function HeroSlider() {
                     <p className="text-[16px]">A17 Pro chip with 6-core GPU Pro camera <br /> system with 48MP main</p>
                     <Button onClick={handleShopNow} className="w-[118px] h-[38px] lg:h-[48px] mt-2 font-semibold text-white" content="Shop now" />
                 </div>
-                <img src={ProMax} alt="" className="absolute bottom-0 right-0 w-[40%] h-[500.5372619628906px]" />
+                <img src={ProMax} alt="" className="absolute bottom-0 right-0 w-[45%] h-[500.5372619628906px]" />
                 </div>
 
                 <div className="flex flex-col justify-between h-[560px] md:hidden lg:flex lg:w-1/3 ml-5">
@@ -58,7 +58,7 @@ export default function HeroSlider() {
                             <h1 className="text-[24px]  font-semibold text-white">New Google <br /> Pixel 6 Pro</h1>
                             <Button onClick={handleShopNow} className=" w-[80px] text-sm lg:text-[16px] lg:w-[100px] h-[38px] lg:h-[48px] mt-2 font-semibold text-white" content="Shop now" />
                         </div>
-                        <span className="bg-[#EFD33D] w-[90px] h-[35px] absolute right-10 top-15 z-88 flex items-center justify-center font-semibold rounded-xs">15% OFF</span>
+                        <span className="bg-[#EFD33D] w-[90px] h-[35px] absolute right-10 top-10 z-88 flex items-center justify-center font-semibold rounded-xs">15% OFF</span>
                         <img className="w-[50%] h-[192px] absolute bottom-1 -right-4" src={PixelPhone} alt="" />
 
                     </div>
@@ -77,7 +77,7 @@ export default function HeroSlider() {
                     <p className="text-[16px]">A17 Pro chip with 6-core GPU Pro camera <br /> system with 48MP main</p>
                      <Button onClick={handleShopNow} className=" w-[118px] h-[38px] lg:h-[48px] mt-2 font-semibold text-white" content="Shop now" />
                 </div>
-                <img src={PromAxPink} alt="" className="absolute bottom-0 right-0 w-[40%] h-[460.5372619628906px]" />
+                <img src={PromAxPink} alt="" className="absolute bottom-0 right-0 w-[45%] h-[460.5372619628906px]" />
                 </div>
 
                 <div className="flex flex-col justify-between h-[560px] hidden lg:flex lg:w-1/3 ml-5">
@@ -115,7 +115,7 @@ export default function HeroSlider() {
                     <p className="text-[16px]">A17 Pro chip with 6-core GPU Pro camera <br /> system with 48MP main</p>
                     <Button onClick={handleShopNow} className="w-[118px] h-[38px] lg:h-[48px] mt-2 font-semibold text-white" content="Shop now" />
                 </div>
-                <img src={ProMax} alt="" className="absolute bottom-0 right-0 w-[40%] h-[500.5372619628906px]" />
+                <img src={ProMax} alt="" className="absolute bottom-0 right-0 w-[45%] h-[500.5372619628906px]" />
                 </div>
 
                 <div className="flex flex-col justify-between h-[560px] md:hidden lg:flex lg:w-1/3 ml-5">
@@ -134,7 +134,7 @@ export default function HeroSlider() {
                             <h1 className="text-[24px]  font-semibold text-white">New Google <br /> Pixel 6 Pro</h1>
                             <Button onClick={handleShopNow} className=" w-[80px] text-sm lg:text-[16px] lg:w-[100px] h-[38px] lg:h-[48px] mt-2 font-semibold text-white" content="Shop now" />
                         </div>
-                        <span className="bg-[#EFD33D] w-[90px] h-[35px] absolute right-10 top-15 z-88 flex items-center justify-center font-semibold rounded-xs">15% OFF</span>
+                        <span className="bg-[#EFD33D] w-[90px] h-[35px] absolute right-10 top-10 z-88 flex items-center justify-center font-semibold rounded-xs">15% OFF</span>
                         <img className="w-[50%] h-[192px] absolute bottom-1 -right-4" src={PixelPhone} alt="" />
 
                     </div>

@@ -27,9 +27,12 @@ export default function ShopByCategory() {
 
   return (
     <div className="container mx-auto px-5 py-5 lg:py-20">
-      <div>
+      <div className="flex justify-between">
+              <div>
         <h1 className="text-[22px] lg:text-[28px] font-bold">Shop By Categories</h1>
         <p className="text-[#5F6C72] text-[16px] lg:text-[18px]">Find exactly what you're looking for</p>
+      </div>
+      <button onClick={toCategories} className="text-[#6C4CF1] flex gap-1 items-center font-semibold lg:hidden">View All <span><IoIosArrowRoundForward size={30} /></span></button>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 mt-6 relative hidden lg:flex lg:justify-between">
@@ -44,7 +47,7 @@ export default function ShopByCategory() {
             <p className="text-sm text-gray-500">Discover 50+ Products</p>
           </div>
         ))}
-        <button onClick={toCategories} className="absolute -right-4 top-15 bg-[#6C4CF1] h-12 w-12 rounded-full text-[35px] text-white flex items-center justify-center">
+        <button onClick={toCategories} className="absolute right-4 top-15 bg-[#6C4CF1] h-12 w-12 rounded-full text-[35px] text-white flex items-center justify-center">
           <IoIosArrowRoundForward />
         </button>
       </div>
