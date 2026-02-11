@@ -184,7 +184,7 @@ export default function HeroSlider() {
             <p className="text-[10px]">A17 Pro chip with 6-core GPU Pro camera <br /> system with 48MP main</p>
             <Button onClick={handleShopNow} className=" w-[70px] h-[25px] mt-2 text-white font-semibold text-[10px]" content="Shop now" />
         </div>
-        <img loading="lazy" className="w-[75px] object-fit h-[150px]" src={PromAxPink} alt="" />
+        <img loading="lazy" className="w-[35%] object-fit h-[150px]" src={PromAxPink} alt="" />
        </div>
        </div>
             </SwiperSlide>
