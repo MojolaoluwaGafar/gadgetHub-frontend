@@ -67,7 +67,7 @@ export default function AdminLogin() {
         toast.error("Login failed");
       }
 
-      console.log("User role:", response.user?.role);
+      // console.log("User role:", response.user?.role);
     } catch (error) {
       setSubmitError(error.message || "Login failed");
       toast.error("Login failed, try again!");

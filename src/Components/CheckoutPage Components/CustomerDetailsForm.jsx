@@ -37,11 +37,11 @@ export default function CustomerDetailsForm({ onChange }) {
       try {
         const response = await fetch("https://temikeezy.github.io/nigeria-geojson-data/data/full.json")
         const data = await response.json()
-        console.log(data);
+        // console.log(data);
         setNigeriaData(data)
         const stateNames = data.map((data)=> data.state)
         setStates(stateNames);
-        console.log(stateNames);
+        // console.log(stateNames);
       } catch (error) {
         console.error("Error loading data", error)
       }

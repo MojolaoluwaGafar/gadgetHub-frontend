@@ -20,7 +20,7 @@ export const AuthProvider = ({children})=>{
            
             setUser(response.data.user)
             setToken(response.data.token)
-            console.log("Signup successful :" , response.data);
+            // console.log("Signup successful :" , response.data);
             localStorage.setItem("token", response.data.token)
             localStorage.setItem("user",JSON.stringify(response.data.user))
 
@@ -41,7 +41,7 @@ export const AuthProvider = ({children})=>{
            
             setUser(response.data.user)
             setToken(response.data.token)
-            console.log("Login successful :" , response.data);
+            // console.log("Login successful :" , response.data);
             localStorage.setItem("token", response.data.token)
             localStorage.setItem("user", JSON.stringify(response.data.user))
 
@@ -59,7 +59,7 @@ export const AuthProvider = ({children})=>{
                     "content-type" : "application/json"
                 }
             })
-            console.log("Password reset request successful", response.data);
+            // console.log("Password reset request successful", response.data);
             return response.data
         } catch (error) {
             console.error("Password reset request failed:",error.response?.data || error.message)
@@ -74,7 +74,7 @@ export const AuthProvider = ({children})=>{
                     "content-type" : "application/json"
                 }
             })
-            console.log("password reset successful:", response.data);
+            // console.log("password reset successful:", response.data);
             
             return response.data
         } catch (error) {
