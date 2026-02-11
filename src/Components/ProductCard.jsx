@@ -19,14 +19,9 @@ export default function ProductCard({id,image,name,description,rating,reviews,pr
   };
   function saveRecentlyViewed(product) {
   let viewed = JSON.parse(localStorage.getItem("recentlyViewed")) || [];
-
-  // Remove duplicates
   viewed = viewed.filter(p => p.id !== product.id);
-
-  // Add to front
   viewed.unshift(product);
 
-  // Limit to last 10
   if (viewed.length > 10) viewed = viewed.slice(0, 10);
 
   localStorage.setItem("recentlyViewed", JSON.stringify(viewed));
